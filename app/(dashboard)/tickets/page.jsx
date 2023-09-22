@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import TicketList from "./TicketList";
 import Loading from "../loading";
+import { HiPlus } from "react-icons/hi";
+import Link from "next/link";
 
 export const metadata = {
   title: 'Dojo Helpdesk | Tickets',
@@ -19,6 +21,9 @@ export default function Tickets() {
         <Suspense fallback={<Loading />}>
           <TicketList />
         </Suspense>
+        <Link href='/tickets/create'>
+          <button className="btn-primary"><HiPlus />Create New Ticket</button>
+        </Link>
     </main>
   )
 }

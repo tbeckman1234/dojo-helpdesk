@@ -16,14 +16,14 @@ export default function Tickets() {
             <h2>Tickets</h2>
             <p><small>Currently open tickets.</small></p>
           </div>
+          <Link href='/tickets/create' className="ml-auto">
+          <button className="btn-primary"><HiPlus />Create New Ticket</button>
+        </Link>
         </nav>
         
         <Suspense fallback={<Loading />}>
           <TicketList />
         </Suspense>
-        <Link href='/tickets/create'>
-          <button className="btn-primary"><HiPlus />Create New Ticket</button>
-        </Link>
     </main>
   )
 }
